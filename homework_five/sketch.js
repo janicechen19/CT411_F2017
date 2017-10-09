@@ -148,7 +148,8 @@ function draw() {
 }
 
 function mousePressed() {
-    if(d < circRadius || dTwo < circRadius || dThree < circRadius || dFour < CircRadius && isClicked == false) {
+    if(d < circRadius || dTwo < circRadius || dThree < circRadius || dFour < circRadius && isClicked == false) {
+        
         catchMe = "YOU CAUGHT ME"
         colorBlackWhite = 255;
         speed = 0;
@@ -158,7 +159,9 @@ function mousePressed() {
         catchMeColor = 0;
         
         isClicked = !isClicked;
-    }else if(d < circRadius || dTwo < circRadius || dThree < circRadius || dFour < CircRadius && isClicked == true) {
+        
+    }else if(d < circRadius || dTwo < circRadius || dThree < circRadius || dFour < circRadius && isClicked == true) {
+        
         catchMe = "CATCH ME";
         colorBlackWhite = 0;
         speed = 10;
@@ -168,5 +171,6 @@ function mousePressed() {
         catchMeColor = 255;
         
         isClicked = !isClicked;
+        
     }
 }
