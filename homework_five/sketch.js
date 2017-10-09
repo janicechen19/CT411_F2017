@@ -69,13 +69,6 @@ function draw() {
         text(catchMe,500,i+5);
     }
     
-    for(var j = 15; j <= height; j+=20) {
-        noFill();
-        strokeWeight(3);
-        stroke(colorBlackWhite,80);
-        line(0,j,width,j);
-    }
-    
     noStroke();
     
     //green
