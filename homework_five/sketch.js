@@ -45,13 +45,13 @@ function setup() {
     circTwoY = 500;
     
     circThreeX = 300;
-    circThreeY = 700;
+    circThreeY = 600;
     
     circFourX = 700;
     circFourY = 200;
     
     textFont(roboto);
-    textSize(80);
+    textSize(120);
     textStyle(BOLD);
     textAlign(CENTER);
     
@@ -60,6 +60,22 @@ function setup() {
 function draw() {
     
     background(colorBlackWhite);
+    
+    for(var i = 100; i < 800; i+=150) {
+        fill(255,0,0,30);
+        text(catchMe,490,i);
+        fill(catchMeColor,80);
+        text(catchMe,500,i);
+        text(catchMe,500,i+5);
+    }
+    
+    for(var j = 15; j <= height; j+=20) {
+        noFill();
+        strokeWeight(3);
+        stroke(colorBlackWhite,80);
+        line(0,j,width,j);
+    }
+    
     noStroke();
     
     //green
@@ -142,8 +158,8 @@ function draw() {
         circFourX = circFourX + speedFour;
     }
     
-    fill(catchMeColor);
-    text(catchMe,500,350);
+//    fill(catchMeColor);
+//    text(catchMe,500,350);
     
 }
 
