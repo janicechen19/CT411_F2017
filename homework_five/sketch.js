@@ -28,6 +28,8 @@ var dFour;
 var roboto;
 var catchMe = "CATCH ME";
 
+var gameSound;
+
 var isClicked = false;
 
 function preload() {
@@ -62,9 +64,9 @@ function draw() {
     background(colorBlackWhite);
     
     for(var i = 100; i < 800; i+=150) {
-        fill(255,0,0,30);
+        fill(255,0,0,random(0,35));
         text(catchMe,490,i);
-        fill(catchMeColor,80);
+        fill(catchMeColor,random(50,80));
         text(catchMe,500,i);
         text(catchMe,500,i+5);
     }
