@@ -41,6 +41,13 @@ function cuteCharacter(x,y,size,r,g,b) {
     
 }
 
-/* Hello! I had a lot of fun with this project and I wanted to leave some comments incase you were curious. So creating functions has made my life much easier, and I get to make infinite cute characters. The math I guess and checked on, so I started with one character, figured out the math, and then did the random function, and then placed the background in the setup to constantly create the characters
+/* Hello! I had a lot of fun with this project and 
+I wanted to leave some comments incase you were curious. 
+So creating functions has made my life much easier, and 
+I get to make infinite cute characters. The math I guess 
+and checked on, so I started with one character, figured 
+out the math, and then did the random function, and then 
+placed the background in the setup to constantly 
+create the characters.
 
 Now there is a place for infinite cuteness! :) */
