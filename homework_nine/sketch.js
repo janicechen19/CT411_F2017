@@ -1,103 +1,8 @@
-
-var snow = {
-    x: 20,
-    y: 0,
-    size: 10,
-    speed: 2,
-    fall: function() {
-        fill(255);
-        noStroke();
-        ellipse(this.x,this.y,this.size,this.size);
-        this.y = this.y + this.speed;
-        
-        if(this.y > height) {
-        this.y = 0;
-        this.x = this.x + random(-10,10);
-    }
-
-    }
-}
-
-var snow2 = {
-    x: 50,
-    y: 0,
-    size: 15,
-    speed: 3,
-    fall: function() {
-        fill(255);
-        noStroke();
-        ellipse(this.x,this.y,this.size,this.size);
-        this.y = this.y + this.speed;
-        
-        if(this.y > height) {
-        this.y = 0;
-        this.x = this.x + random(-10,10);
-    }
-
-    }
-}
-
-var snow3 = {
-    x: 500,
-    y: 0,
-    size: 15,
-    speed: 2,
-    fall: function() {
-        fill(255);
-        noStroke();
-        ellipse(this.x,this.y,this.size,this.size);
-        this.y = this.y + this.speed;
-        
-        if(this.y > height) {
-        this.y = 0;
-        this.x = this.x + random(-10,10);
-    }
-
-    }
-}
-
-var snow4 = {
-    x: 700,
-    y: 0,
-    size: 10,
-    speed: 1,
-    fall: function() {
-        fill(255);
-        noStroke();
-        ellipse(this.x,this.y,this.size,this.size);
-        this.y = this.y + this.speed;
-        
-        if(this.y > height) {
-        this.y = 0;
-        this.x = this.x + random(-10,10);
-    }
-
-    }
-}
-
-var snow5 = {
-    x: 800,
-    y: 0,
-    size: 15,
-    speed: 2,
-    fall: function() {
-        fill(255);
-        noStroke();
-        ellipse(this.x,this.y,this.size,this.size);
-        this.y = this.y + this.speed;
-        
-        if(this.y > height) {
-        this.y = 0;
-        this.x = this.x + random(-10,10);
-    }
-
-    }
-}
-
+var snowX = [20,351,100,220,401,570,801,1000,50,635,422,135,250,150,725,637,888,550,920];
+var speed=0.5;
+var snowY = 0;
+var snowSize = 15;
 var shiver;
-
-//Still working on incorporating the array :)
-var complaint = ["IT'S SO COLD!", "YAY! SNOW!", "LET'S BUILD A SNOWMAN!"];
 
 function setup() {
     
@@ -154,13 +59,34 @@ function draw() {
     cuteCharacter(300+shiver,500+shiver,100,55,105,155);
     cuteCharacter(700+shiver,700+shiver,100,205,205,155);
     
-    snow.fall();
-    snow2.fall();
-    snow3.fall();
-    snow4.fall();
-    snow5.fall();
+    for(var i = 0; i < snowX.length; i++) {
+        
+        fill(255);
+        noStroke();
+        ellipse(snowX[i],snowY*random(-2,2),snowSize,snowSize);
+            
+    }
     
-
+//    if(i%2==0) {
+//        speed = 1;
+//    }else{
+//        speed = 2;
+//    }
+    
+    
+    
+    
+    snowY = snowY + speed;
+    
+    
+//    if(snowY > height) {
+//        snowY = 0;
+//    }
+    
+    if(snowY == height/2){
+        speed = 0;
+    }
+    
 }
 
 function cuteCharacter(x,y,size,r,g,b) {
