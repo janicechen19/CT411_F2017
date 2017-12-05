@@ -12,7 +12,7 @@ var state = 1;
 
 var rand = random(20,100);
 
-//var gameSound;
+var gameSound;
 
 // automatedColor = 216,46,3
 // controlColor = 185,171,255;
@@ -21,7 +21,7 @@ function preload() {
     
     ptsans = loadFont("PT_Sans-Web-Bold.ttf");
     
-//    gameSound = loadSound("explore.mp3");
+    gameSound = loadSound("explore.mp3");
     
 }
 
@@ -42,7 +42,7 @@ function setup() {
     textFont(ptsans);
     textStyle(BOLD);
     
-//    gameSound.loop();
+    gameSound.loop();
 
 }
 
